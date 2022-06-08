@@ -1,0 +1,21 @@
+
+.form-end{
+    display: grid;
+    justify-content: center;
+
+}
+
+.form-heading h4{
+    display: grid;
+    justify-content: center;
+
+}
+#error{
+    color: red !important;
+}
+@media only screen and (min-width:400px) {
+    .form-end{
+        position: relative;
+        left: 80px;
+    }
+}

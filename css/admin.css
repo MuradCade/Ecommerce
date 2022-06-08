@@ -1,0 +1,24 @@
+
+.font-small{
+    font-size: 20px !important;
+}
+
+input{
+    border: 1px solid #f4f4f4  !important;
+}
+.form-group{
+    display: none;
+   margin-left: -80%;
+   position: relative;
+   top: 120px;
+}
+
+img{
+    width: 60px;
+}
+
+
+#profile{
+    font-size: 80px;
+    color: #178afdd5;
+}

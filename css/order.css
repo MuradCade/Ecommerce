@@ -1,0 +1,8 @@
+.material-icons{
+    color: #7e31db !important;
+    cursor: pointer;
+}
+
+.material-icons:hover{
+    color:#b3bde9 !important;
+}

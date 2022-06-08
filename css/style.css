@@ -1,0 +1,435 @@
+
+body{
+ font-family: 'Poppins', sans-serif;
+ overflow-x: hidden;
+}
+.nav-item{
+    line-height: 50px;
+}
+
+.navbar-brand{
+    color: #7e31db !important;
+}
+.navbar-brand span{
+    color: #7e31db !important;
+   position: relative;
+   top: 4px;
+}
+.nav-link{
+    color:#2b2b2b !important;
+    font-weight: 590;
+}
+.active{
+    color: #7e31db !important;
+    font-weight: 600;
+}
+
+.btn{
+    background-color: #7e31db;
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.btn:hover{
+    background-color: #421e6e;
+    color: white;
+}
+.nav-link:hover{
+    color:#7e31db !important;
+    font-weight: 500;
+}
+
+.font-bold{
+    font-weight: 700;
+}
+
+.icons{
+    display: inline;
+    margin-right: 60px;
+    margin-left:10px;
+}
+
+.icons span{
+    cursor: pointer;
+    color:#7e31db;
+}
+
+.icons span:hover{
+    color: #000;;
+}
+
+
+/* hero section */
+
+.hero-img{
+    background-image:url(../img/background-img.png);
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-img span{
+    color:#7e31db;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    left: 36px;
+    top: -10px;
+    
+}
+.hero-img .containers{
+    position: relative;
+    top: 142px;
+    left: 50px;
+
+}
+
+.main-text h2{
+    font-size: 28px;
+    margin-right: 18px;
+    text-transform: capitalize;
+    font-weight: 700;
+  
+}
+
+.avatar{
+    position: absolute;
+    top: -140px;
+    max-width: 50%;
+    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.btn2{
+      background-color: #7e31db;
+      color: white;
+      margin-top: 12px;
+      border: unset ;
+      font-size: 18px;
+    }
+    
+    .btn3{
+        background-color:#fd346e;
+        color: white;
+        border: unset ;
+        font-size: 18px;
+}
+
+
+.btn2:hover{
+    background-color: #a35cfa;
+}
+.btn3:hover{
+    background-color: #a82449;
+}
+
+
+.icon-1{
+    width: 70px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid #cccccc;
+    margin-top: 5px;
+    
+
+}
+
+.body-text{
+    margin-left: 20px;
+
+}
+.body-text h4{
+    font-size: 17px;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+
+.body-text span{
+    color: #848c9b;
+    font-size: 18px;
+    margin-left: 6px;
+    text-align: center;
+}
+
+
+.card-body{
+    margin-bottom: 20px;
+}
+
+.card-body:hover{
+    animation: move 1s ;
+    cursor: pointer;
+       
+}
+.card-body .header-text{
+    margin-top: -70px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 18px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+
+}
+
+.card-body .link-veiw{
+    margin-top: -20px;
+    margin-left: 18px;
+    color: #848c9b;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.link-veiw:hover{
+   color: #7e31db;
+}
+
+@keyframes move {
+    to {
+        transform: translateY(0px)
+    }
+
+    from {
+        transform: translateY(6px)
+    }
+
+    /* slide down to make room for advertisements */
+}
+#card{
+    position: relative;
+    top: 4px;
+}
+.size-md{
+    font-size: 20px;
+    
+}
+.size-lg{
+    font-size:38px;
+    text-transform: capitalize;
+    color: #fd346e;
+    font-weight: 900px;
+}
+.size-sm{
+    font-size: 14px;
+}
+
+.lead{
+    font-size: 17px;
+    text-align: center;
+    margin-left:200px;
+    margin-right: 210px;
+}
+
+/* show more button */
+.btn1{
+    background-color: #fd346e;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn1:hover{
+    background-color: #a82449;
+}
+
+.price{
+    color: #848c9b;
+    display: flex;  
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 10px;   
+    /* margin-top: 18px; */
+}
+.product-img:hover{
+    content: url("../product-img//Mens-Standard-Fit-Sherpa-Fleece-Jacket02-600x764.jpg");
+    transition:0.7s;
+}
+
+.product-img2:hover{
+    content: url("../product-img/WD·NY-Black-Mens-Palm-Burgundy-Jacket02-600x764.jpg");
+    transition:0.7s;
+
+}
+.product-img3:hover{
+    content: url("../product-img/Mens-Standard-Fit-Sweater-Fleece-Jacket02-600x764.jpg");
+    transition:0.7s;
+
+}
+.product-img4:hover{
+    content: url("../product-img/Mens-Standard-Fit-Deconstructed-Knit-Blazer02-600x764.jpg");
+    transition:0.7s;
+
+}
+.product-img5:hover{
+    content: url("../product-img/Mens-Standard-Fit-Heathered-Short-Sleeve-V-Neck-T-Shirt02-600x764.jpg");
+    transition:0.7s;
+
+}
+.product-img6:hover{
+    content: url("../product-img/Mens-Standard-Fit-Short-Sleeve-V-Neck-T-Shirt02-1-600x764.jpg");
+    transition:0.7s;
+
+}
+.product-img7:hover{
+    content: url("../product-img/Mens-Standard-Fit-Short-Sleeve-Crew-T-Shirt02-600x764.jpg");
+    transition:0.7s;
+
+}
+.product-img8:hover{
+    content: url("../product-img/Mens-Standard-Fit-Crew-T-Shirt02-600x764.jpg");
+    transition:0.7s;
+
+}
+
+/* .text-secondary{
+} */
+
+.lg-text{
+    color: #fd346e;
+    font-size: 48px;
+    font-weight: 900px;
+}
+
+/* testimoneial */
+section{
+    background-color: #f8f8ff !important;
+}
+
+.main-content{
+   margin-bottom: unset;
+}
+.cont{
+    position: relative;
+    left: 80px;
+}
+
+
+.rating-number p{
+    font-size: 120px;
+    flex-basis: 80px;
+    position: relative;
+    top: -60px;
+    color: #cdd0db;
+    font-weight: bolder;
+
+
+}
+ 
+.rating{
+    position: relative;
+    top: 80px;
+    font-size: 20px;
+    color: #cccccc;
+}
+#star{
+    color: yellow;
+    font-size: 29px;
+    position: relative;
+    top: -140px;
+    left:30px;
+}
+
+.card01{
+    background-color: #ffffff;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.avatar-1{
+    width: 100px;
+    margin-top: -40px;
+    margin-left: 120px;
+    border-radius: 50px;
+}
+
+.text{
+    max-width: 20em;
+}
+
+.image-box{
+display: flex;
+flex-direction:column;
+padding: 10px;
+}
+.title{
+    margin-left: 130px;
+    margin-top: -4px;
+}
+.name{
+    margin-left: 130px;
+    margin-top: 10px;
+}
+
+.top-none{
+    margin-top: -100px;
+}
+
+.font-normal{
+    font-weight: 590;
+}
+
+.footer{
+    padding-left:0 ;
+    padding-right: 0;
+    background-color: #f0f0f3;
+    margin-top:100px;
+    width: 100%;
+    padding: 90px;
+}
+
+.border-rounded{
+    border: 2px solid #848c9b;
+    font-weight: 500;
+}
+
+.discount{
+    color: #848c9b;
+}
+
+.link:hover{
+    color: #7e31db;
+    cursor: pointer;
+}
+
+.company-name{
+    color: #7e31db;
+    cursor: pointer;
+}
+
+#exampleModal{
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    height: 400% !important;
+    display: none;
+}
+
+#search{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    height: 400% !important;
+    display: none;
+}
+.font-small{
+    font-size: 16px;
+}
+
+.hover:hover{
+    color: #7e31db !important;
+    font-weight: bold;
+
+}
+
+.color{
+    color: #1b8cfdda !important;
+}

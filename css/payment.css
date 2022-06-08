@@ -1,0 +1,18 @@
+.card-title{
+    display:flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.card-title p{
+    font-size: 19px;
+    font-weight: bold;
+}
+
+ul li{
+    list-style: none;
+}
+
+.price{
+    color: #7e31db !important;
+}

@@ -1,0 +1,87 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-one{
+    margin-right: 20px;
+}
+
+.submit{
+    margin-left:2px;
+}
+
+
+
+
+.navbar-brand {
+    color: #7e31db !important;
+}
+
+.navbar-brand span {
+    color: #7e31db !important;
+    position: relative;
+    top: 4px;
+}
+
+.nav-link {
+    color: #2b2b2b !important;
+    font-weight: 590;
+}
+
+
+
+.btn {
+    background-color: #7e31db;
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background-color: #421e6e;
+    color: white;
+}
+
+.nav-link:hover {
+    color: #7e31db !important;
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.icons {
+    display: inline;
+    margin-right: 60px;
+    margin-left: 10px;
+}
+
+.icons span {
+    cursor: pointer;
+    color: #7e31db;
+}
+
+.icons span:hover {
+    color: #000;
+    ;
+}
+
+#track{
+    color:#7e31db !important;
+    font-weight: bold;
+}
+
+#track:hover{
+    color: #790bff !important;
+    font-weight: unset;
+}
+
+#exampleModal {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    height: 400% !important;
+    display: none;
+}

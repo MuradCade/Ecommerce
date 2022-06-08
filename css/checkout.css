@@ -1,0 +1,24 @@
+img{
+    width: 40px;
+}
+
+font-bold{
+    font-weight: bold;
+
+}
+.left{
+    position: relative;
+    left:22px;
+}
+
+.detail  {
+   margin-right: 10px;
+   margin-left: 10px;
+}
+
+#co {
+    width:400px !important;
+}
+#exampleModal{
+    z-index: 999 !important;
+}
