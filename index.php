@@ -14,6 +14,7 @@
     <script src="js/bootstrap.bundle.min.js" defer></script>
     <script src="js/jquery.js" defer></script>
     <script src="js/model.js" defer></script>
+    <script src="js/subscribe.js" defer></script>
     <title>Home</title>
 </head>
 
@@ -127,10 +128,10 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-10 col-12  main-text">
                         <span class="text-md-start">Top sale on this week</span>
-                        <h2 class="text-md-center text-sm-justify">Explore Amazing Fashionable Blazers this Shadi Season</h2>
+                        <h2 class="text-md-center text-sm-justify">Explore Amazing Fashionable Blazers this Wedding Season</h2>
                         <div class="text-md-center">
-                            <input type="submit" class="btn2 btn-lg rounded-pill" value="Shop Now"></input>
-                            <input type="submit" class="btn3 btn-lg rounded-pill" value="Learn More"></input>
+                            <a href="view/shop.php" class="btn2 btn btn-lg rounded-pill">Shop Now</a>
+                            <a href="view/contact.php" class="btn3 btn btn-lg rounded-pill mt-2">Contact Us</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-4 col-12">

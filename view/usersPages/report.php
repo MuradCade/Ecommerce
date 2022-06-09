@@ -49,14 +49,14 @@ if ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'customer') {
                 </div>
                 <ul class="list-unstyled components mb-5">
                     <li>
-                        <a href="#"><span class="fa fa-home mr-3"></span> Dashboard</a>
+                        <a href="Admindash.php"><span class="fa fa-home mr-3"></span> Dashboard</a>
                     </li>
                     <li>
                         <a href="order.admin.php"><span class="fa fa-server  mr-3"></span> Orders</a>
                     </li>
                     <li>
                     <li>
-                        <a href="#"><span class="fa fa-shopping-bag  mr-3"></span> Product</a>
+                        <a href="product.admin.php"><span class="fa fa-shopping-bag  mr-3"></span> Product</a>
                     </li>
                     <li>
                         <a href="payment.php"><span class="fa fa-money  mr-3"></span>Payment</a>

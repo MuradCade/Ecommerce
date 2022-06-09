@@ -27,8 +27,8 @@ class Addnewuser extends database
                 $random_number .= $random_digit;
                 $count++;
             }
-
-            $sql = "INSERT Into login (userid,username,pwd,role,email)value('$random_number','$username','$pwd','customer','$email')";
+            $role = "customer";
+            $sql = "INSERT Into login (userid,username,pwd,role,email)value('$random_number','$username','$pwd','$role','$email')";
             $result2  = mysqli_query($this->connect, $sql);
         }
     }

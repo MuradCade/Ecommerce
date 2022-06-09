@@ -281,6 +281,7 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/jquery.js"></script>
     <script src="../js/model.js"></script>
+    <script src="../js/subscribe.js"></script>
 </body>
 
 </html>

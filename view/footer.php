@@ -15,8 +15,10 @@
             <div class="col-lg-4 col-md-4 col-12 mt-2">
                 <h5 class="text-secondary size-md">Newsletter</h5>
                 <p class="discount">Get 20% off for your first order by joining to our newsletter.</p>
-                <input type="text" class="form-control mb-3 border-rounded" placeholder="Your Email Here ...">
-                <button class="btn ">Substcribe</button>
+                <p class="text-success text-center" style="font-size: 18px; text-transform:capitalize; font-weight:bold;" id="msg"></p>
+                <p class="text-danger text-center" style="font-size: 18px; text-transform:capitalize; font-weight:bold;" id="error"></p>
+                <input type="text" class="form-control mb-3 border-rounded" id="email" placeholder="Your Email Here ...">
+                <button class="btn" id="btn">Subscribe</button>
             </div>
         </div>
         <p class="text-center mt-5 mb-0 discount">Copyright © 2022 <span class="company-name">Greatness</span> | Powered by Amazon</p>
