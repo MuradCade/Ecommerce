@@ -5,6 +5,7 @@
 require_once('../../model/connection.php');
 class dislayCrad extends database
 {
+
     public function cardtable()
     {
         $sql = "select * from product";

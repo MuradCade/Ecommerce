@@ -77,8 +77,8 @@ if ($_SESSION['role'] != 'customer') {
                         <div class="col-lg-3">
                             <div class="card shadow" style="width: 13rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title" style="font-size: 16px;">Amount Of Users</h5>
-                                    <p class="card-text text-center" style="font-size: 40px;">46</p>
+                                    <h5 class="card-title" style="font-size: 16px;">Product in card</h5>
+                                    <p class="card-text text-center" style="font-size: 40px;">0</p>
 
                                 </div>
                             </div>
@@ -86,8 +86,8 @@ if ($_SESSION['role'] != 'customer') {
                         <div class="col-lg-3 ">
                             <div class="card shadow" style="width: 13rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title" style="font-size: 16px;">Amount Of Users</h5>
-                                    <p class="card-text text-center" style="font-size: 40px;">46</p>
+                                    <h5 class="card-title" style="font-size: 16px;">Amount purcheses</h5>
+                                    <p class="card-text text-center" style="font-size: 40px;">0</p>
 
                                 </div>
                             </div>
@@ -95,8 +95,8 @@ if ($_SESSION['role'] != 'customer') {
                         <div class="col-lg-3 ">
                             <div class="card shadow" style="width: 13rem;">
                                 <div class="card-body">
-                                    <h5 class="card-title" style="font-size: 16px;">Amount Of Users</h5>
-                                    <p class="card-text text-center" style="font-size: 40px;">46</p>
+                                    <h5 class="card-title" style="font-size: 16px;">delivered Products</h5>
+                                    <p class="card-text text-center" style="font-size: 40px;">0</p>
 
                                 </div>
                             </div>

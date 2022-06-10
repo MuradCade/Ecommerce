@@ -95,9 +95,10 @@ if ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'customer') {
                     <button class="btn btn-success" id="add">Add New Product</button>
                     <a href="product.admin.php" class="btn btn-secondary">Display Data</a>
                 </div>
-                <table class="table table-striped responsive table-hoverable ">
+                <table class="table table-striped table-responsive table-hoverable ">
                     <thead>
                         <th>No</th>
+                        <th>Product_Id</th>
                         <th>product_image</th>
                         <th>product_name</th>
                         <th>product_price</th>
@@ -113,6 +114,7 @@ if ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'customer') {
                                 <td><?php echo $key;
                                     $key++; ?></td>
                                 <td><img src="../../product-img/<?php echo $fetched['product_img']; ?>" alt="product"></td>
+                                <td><?php echo $fetched['product_id']; ?></td>
                                 <td><?php echo $fetched['product_name']; ?></td>
                                 <td><?php echo $fetched['product_price']; ?></td>
                                 <td><?php echo $fetched['product_quantity']; ?></td>
@@ -148,7 +150,7 @@ if ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'customer') {
                     </div>
                     <div class="form-body">
                         <label class="form-label">Product Description</label>
-                        <input type="text" class="form-control" value="Product Description" placeholder="Enter Product Description.." name="pdesc">
+                        <input type="text" class="form-control" value="Qui, explicabo eius nisi fugit repudiandae, quos voluptates, beatae ullam consectetur ducimus itaque! Tempore provident eligendi sed ipsum ea. Reiciendis nulla neque sapiente, totam veritatis non? Odio, quaerat" placeholder="Enter Product Description.." name="pdesc">
                     </div>
                     <button class="btn btn-primary  mt-4" name="submit">Save</button>
                 </form>

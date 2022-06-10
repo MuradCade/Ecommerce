@@ -77,40 +77,43 @@ if ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'customer') {
             <?php
             include('../../include/displayorderadmin.php');
             $fetch = new displayOrder();
-            $i = 1;
-
+            $data = $fetch->orders();
             ?>
+
             <!-- Page Content  -->
             <div id="content" class="p-4 p-md-5 pt-5">
-                <h4 class="text-center">Order table</h4>
+                <h4 class="text-center" style="text-transform: capitalize !important;">Order table</h4>
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Product Id</th>
-                            <th scope="col">User Id</th>
-                            <th scope="col">Order Status</th>
-                            <th scope="col">Payment Method</th>
-                            <th scope="col">Shipping Status</th>
+                            <th scope="col">Order_Id</th>
+                            <th scope="col">Product_Id</th>
+                            <th scope="col">User_Id</th>
+                            <th scope="col">Order_Status</th>
+                            <th scope="col">Payment_Method</th>
+                            <th scope="col">Shipping_tatus</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row"><?php echo $i; ?></th>
+                        <?php $i = 1;
+                        foreach ($data as $fetched) { ?>
+                            <tr>
+                                <th scope="row"><?php echo $i;
+                                                $i++; ?></th>
 
-                            <td><input type="text" value="<?php $fetch->orders('product_id') ?>" name="pid"></td>
-                            <td><input type="text" value="<?php $fetch->orders('user_id') ?>" name="userid"></td>
-                            <td><input type="text" value="<?php $fetch->orders('order_status') ?>" name="orderstatus"></td>
-                            <td><input type="text" value="<?php $fetch->orders('payment_method') ?>" name="pmethod"></td>
-                            <td><input type="text" value="<?php $fetch->orders('shipping_status') ?>" name="ship"></td>
-                            <td><a href="../../include/updateorder.admin.php?update=<?php $fetch->orders('id'); ?>" class="btn btn-sm btn-primary mb-2">update</a>
-                                <a href="../../include/updateorder.main.php?del=<?php $fetch->orders('id'); ?>" class="btn btn-sm btn-danger mb-2">Delete</a>
-                            </td>
-
-
-
-                        </tr>
+                                <td><?php echo $fetched['e_status'] ?></td>
+                                <td><?php echo $fetched['product_id'] ?></td>
+                                <td><?php echo $fetched['user_id'] ?></td>
+                                <td><?php echo $fetched['order_status'] ?></td>
+                                <td><?php echo $fetched['payment_method'] ?></td>
+                                <td><?php echo $fetched['shipping_status'] ?></td>
+                                <td><a href="../../include/updateorder.admin.php?update=<?php echo $fetched['id']; ?>" class="btn btn-sm btn-primary mb-2">update</a>
+                                    <a href="../../include/updateorder.main.php?del=<?php echo $fetched['id']; ?>" class="btn btn-sm btn-danger mb-2">Delete</a>
+                                </td>
+                            </tr>
+                        <?php } ?>
 
                     </tbody>
                 </table>
@@ -118,7 +121,7 @@ if ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'customer') {
             </div>
 
             <script src="../../js/jquery.js"></script>
-            <script src="js/popper.js"></script>
+            <script src="../../js/popper.js"></script>
             <script src="../../js/bootstrap.bundle.min.js"></script>
             <script src="../../js/dash.js"></script>
     </body>

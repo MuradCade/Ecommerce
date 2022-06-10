@@ -85,11 +85,13 @@ if ($_SESSION['role'] != 'customer') {
             <div id="content" class="p-4 p-md-5 pt-5">
                 <div class="container">
                     <h4 class="text-center mt-2">Change Your Password</h4>
-                    <form action="../../include/change.admin.password.php" method="post">
+                    <form action="../../include/change.password.php" method="post">
 
                         <div class="form-control">
                             <label class="form-control">UserId</label>
                             <input type="text" class="form-control" readonly value="<?php echo $_SESSION['id'] ?>">
+                            <label class="form-control">Username</label>
+                            <input type="text" class="form-control" placeholder="Enter Your New Username" name="username">
                             <label class="form-control">Password</label>
                             <input type="password" class="form-control" placeholder="Enter New Password" name="pwd">
                             <button class="btn btn-primary mt-4" name="submit">Submit</button>

@@ -34,16 +34,14 @@
                             <a class="nav-link" aria-current="page" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.php">Shop</a>
+                            <a class="nav-link" href="../view/shop.php">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="track.php">Track Order</a>
+                            <a class="nav-link" href="../view/track.php">Track Order</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="contact.php">Contact</a>
+                            <a class="nav-link " href="../view/contact.php">Contact</a>
                         </li>
 
 
@@ -85,19 +83,16 @@
                             <a class="nav-link" aria-current="page" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.php">Shop</a>
+                            <a class="nav-link" href="../view/shop.php">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="track.php">Track Order</a>
+                            <a class="nav-link" href="../view/track.php">Track Order</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="contact.php">Contact</a>
+                            <a class="nav-link " href="../view/contact.php">Contact</a>
                         </li>
                         <li class="nav-item mt-2">
-                            <a href="login.php" class="btn">Login</a>
+                            <a href="../view/login.php" class="btn">Login</a>
                         </li>
 
                     </ul>

@@ -193,9 +193,17 @@
                             <input type="text" name="lname" placeholder="Enter Your Last Name..." class="form-control">
                             <label class="form-label mt-2 mb-2">City</label>
                             <input type="text" name="country" placeholder="Enter Your City..." class="form-control">
+                            <label class="form-label mt-2 mb-2">Street Name</label>
+                            <input type="text" name="street" placeholder="Enter Street Name" class="form-control">
+                            <label class="form-label mt-2 mb-2">Zip Code</label>
+                            <input type="text" name="zipcode" placeholder="Enter Zip Code..." class="form-control">
                             <label class="form-label mt-2 mb-2">Payment Method</label>
                             <select name="payment" class="form-select">
                                 <option value="zaad" selected>Zaad</option>
+                            </select>
+                            <label class="form-label mt-2 mb-2">Company Number</label>
+                            <select name="number" class="form-select">
+                                <option value="0633558027" selected>0633558027</option>
                             </select>
                             <label class="form-label mt-2 mb-2">Phone Number</label>
                             <input type="text" name="phone" placeholder="Enter Your Phone Number..." class="form-control">

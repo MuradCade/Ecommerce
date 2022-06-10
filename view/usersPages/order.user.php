@@ -68,30 +68,37 @@ if ($_SESSION['role'] != 'customer') {
             <?php
             include('../../include/display.user.php');
             $fetch = new displayoder();
-            $i = 1;
             $data = $fetch->order();
-            foreach ($data as $fetched) { ?>
-
-                <!-- Page Content  -->
-                <div id="content" class="p-4 p-md-5 pt-5">
-                    <div class="container">
+            ?>
 
 
-                        <table class="table">
-                            <thead class="thead-dark">
+            <!-- Page Content  -->
+            <div id="content" class="p-4 p-md-5 pt-5">
+                <div class="container">
+
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Order_Id</th>
+                                <th scope="col">Product Id</th>
+                                <th scope="col">User Id</th>
+                                <th scope="col">Order Status</th>
+                                <th scope="col">Payment Method</th>
+                                <th scope="col">Shipping Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $i = 1;
+
+                            foreach ($data as $fetched) { ?>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Product Id</th>
-                                    <th scope="col">User Id</th>
-                                    <th scope="col">Order Status</th>
-                                    <th scope="col">Payment Method</th>
-                                    <th scope="col">Shipping Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><?php echo $i; ?></th>
+                                    <th scope="row"><?php echo $i;
+                                                    $i++; ?></th>
 
+                                    <td><?php echo $fetched['e_status'] ?></td>
                                     <td><?php echo $fetched['product_id'] ?></td>
                                     <td><?php echo $fetched['user_id'] ?></td>
                                     <td><?php echo $fetched['order_status'] ?></td>
@@ -102,13 +109,13 @@ if ($_SESSION['role'] != 'customer') {
 
 
                                 </tr>
+                            <?php } ?>
 
-                            </tbody>
-                        </table>
+                        </tbody>
+                    </table>
 
-                    </div>
                 </div>
-            <?php } ?>
+            </div>
 
             <script src="../../js/jquery.js"></script>
             <script src="js/popper.js"></script>

@@ -28,6 +28,40 @@ class Productdetail extends database
                             <div class="text-main">
                                 Quantity: <input type="number" class="fomr-control w-10" value="<?php echo $row['product_quantity']; ?>">
                                 <button class="btn ">Add To Card</button>
+                                <div class="container">
+                                    <div class="mt-2 mb-2 text-secondary">Size Name: <span id="sizename">S</span></div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-2" id="small">
+                                                <div class="card">
+                                                    <div class="card-footer">
+                                                        <p>S</p>
+                                                        <hr>
+                                                        <p>Small</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3" id="medium">
+                                                <div class="card">
+                                                    <div class="card-footer">
+                                                        <p>M</p>
+                                                        <hr>
+                                                        <p>Medium</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2" id="large">
+                                                <div class="card">
+                                                    <div class="card-footer">
+                                                        <p>L</p>
+                                                        <hr>
+                                                        <p>Large</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <p class="text-secondary mt-2">Price: $<?php echo $row['product_price']; ?></p>
                                 <p class="text-secondary mt-2">Categories: Jackets, Man, T-Shirts</p>
                                 <p class="text-secondary mt-2">Tags: fashion, man, summer</p>
@@ -49,6 +83,30 @@ class Productdetail extends database
                     </div>
                 </div>
 
+                <div class="model-body mt-2" style="width:40% !important; height:900% !important" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Shopping cart</h5>
+                                <button type="button" class="close btn-danger" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <?php include("displaydatashop.php"); ?>
+                                <a href="../view/shop.php" class="btn " style="width: 100%; font-size:14px !important;">Continue Shopping</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script src="../js/bootstrap.bundle.min.js"></script>
+                <script src="../js/jquery.js"></script>
+                <script src="../js/model.js" defer></script>
+                <script src="../js/main.js"></script>
+                <script src="../js/subscribe.js"></script>
+                <script src="../js/pricedisplay.js"></script>
                 <?php include('../view/footer.php') ?>
 <?php }
         } else {

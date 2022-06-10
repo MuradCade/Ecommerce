@@ -226,8 +226,8 @@
                         <hr>
                     </div>
                     <div class="main-body  d-flex">
-                        <p class="detail">shipping:$10 <input type="checkbox" name="" id=""></p>
-                        <p class="detail">Free Dlivery:free <input type="checkbox" name="" id=""></p>
+                        <p class="detail">shipping Cost:$10 <input type="checkbox" name="ship" id=""></p>
+                        <p class="detail">Office Delivery : $0 <input type="checkbox" name="deliver"></p>
                     </div>
                     <div class="card-footer">
                         <h5 class="text-secondary font-bold mb-4">Total: $<?php echo $price . ".00" ?></h5>

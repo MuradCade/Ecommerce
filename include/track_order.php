@@ -43,7 +43,7 @@
                             <a class="nav-link " href="../view/contact.php">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="home.php">dashboard</a>
+                            <a class="nav-link " href="../view/home.php">dashboard</a>
                         </li>
 
 

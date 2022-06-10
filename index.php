@@ -74,7 +74,7 @@
 
 
     <?php } else { ?>
-        <nav class="navbar navbar-fixed navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar fixed navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid ">
                 <a class="navbar-brand font-bold px-5" href="index.php"><span class="material-icons">
                         shop_2
@@ -179,14 +179,16 @@
                 <div class="card-body">
                     <img src="img/card (4).jpg" alt=" Tshirt card" class="img-fluid card-pic">
                     <h4 class="header-text">T-Shirt</h4>
-                    <span class="link-veiw">View All</span>
+                    <a href="view/shop.php" class="nav-link line-view">View All</a>
+
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-12 ">
                 <div class="card-body">
                     <img src="img/card (3).jpg" alt=" Tshirt card" class="img-fluid card-pic">
                     <h4 class="header-text">Mugs</h4>
-                    <span class="link-veiw">View All</span>
+                    <a href="view/shop.php" class="nav-link line-view">View All</a>
+
                 </div>
 
             </div>
@@ -194,7 +196,7 @@
                 <div class="card-body">
                     <img src="img/card (5).jpg" alt=" Tshirt card" class="img-fluid card-pic">
                     <h4 class="header-text">Shoes</h4>
-                    <span class="link-veiw">View All</span>
+                    <a href="view/shop.php" class="nav-link line-view">View All</a>
                 </div>
 
             </div>
@@ -202,7 +204,8 @@
                 <div class="card-body">
                     <img src="img/card (2).jpg" alt=" Tshirt card" class="img-fluid card-pic">
                     <h4 class="header-text">Hoodies</h4>
-                    <span class="link-veiw">View All</span>
+                    <a href="view/shop.php" class="nav-link line-view">View All</a>
+
                 </div>
 
             </div>
@@ -210,7 +213,8 @@
                 <div class="card-body">
                     <img src="img/card (6).jpg" alt=" Tshirt card" class="img-fluid card-pic">
                     <h4 class="header-text">Bags</h4>
-                    <span class="link-veiw">View All</span>
+                    <a href="view/shop.php" class="nav-link line-view">View All</a>
+
                 </div>
 
             </div>
@@ -218,7 +222,8 @@
                 <div class="card-body">
                     <img src="img/card (1).jpg" alt=" Tshirt card" class="img-fluid card-pic">
                     <h4 class="header-text">Phone Cases</h4>
-                    <span class="link-veiw">View All</span>
+                    <a href="view/shop.php" class="nav-link line-view">View All</a>
+
                 </div>
 
             </div>
@@ -248,10 +253,10 @@
                     <img src="uploaded-images/<?php $data->product_eight(4); ?>" alt="product 1" class="img-fluid product-img">
 
                     <div class="product-info">
-                        <h5 class="text-center mt-3 font-normal">Black Fashion Jacket</h5>
+                        <h5 class="text-center mt-3"><?php $data->getname(4); ?></h5>
                         <div class="ml-sm-5">
                             <div class="text-start">
-                                <span class="price size-sm">$50.00</span>
+                                <span class="price size-sm"><?php $data->getprice(4) ?></span>
                             </div>
                         </div>
                         <div class="text-center  mb-4">
@@ -264,8 +269,8 @@
                     <img src="product-img/<?php
                                             $data->product_eight(5); ?>" alt="product 2" class="img-fluid product-img2">
                     <div class="product-info">
-                        <h5 class="text-center mt-3">Casual Fashion Jacket</h5>
-                        <span class="price size-sm ">$50.00</span>
+                        <h5 class="text-center mt-3"><?php $data->getname(5); ?></h5>
+                        <span class="price size-sm"><?php $data->getprice(5) ?></span>
                         <div class="text-center mt-1 mb-4">
                             <a href="include/show_product_detail.php?id=<?php $data->getId(5); ?>" class="nav-link font-bold hover color">View More</a>
                             <a href="include/display_single_product_to_card.php?id=<?php $data->getId(5); ?>" class="btn">Add To Cart</a>
@@ -276,8 +281,8 @@
                     <img src="product-img/<?php
                                             $data->product_eight(6); ?>" alt="product 3" class="img-fluid product-img3">
                     <div class="product-info">
-                        <h5 class="text-center mt-3">Black Fashion Swether</h5>
-                        <span class="price size-sm">$50.00</span>
+                        <h5 class="text-center mt-3"><?php $data->getname(6); ?></h5>
+                        <span class="price size-sm"><?php $data->getprice(6) ?></span>
                         <div class="text-center mt-1 mb-4">
                             <a href="include/show_product_detail.php?id=<?php $data->getId(6); ?>" class="nav-link font-bold hover color">View More</a>
                             <a href="include/display_single_product_to_card.php?id=<?php $data->getId(6); ?>" class="btn">Add To Cart</a>
@@ -288,8 +293,8 @@
                     <img src="product-img/<?php
                                             $data->product_eight(7); ?>" alt="product 4" class="img-fluid product-img4">
                     <div class="product-info">
-                        <h5 class="text-center mt-3">Grey Men jacket</h5>
-                        <span class="price size-sm">$50.00</span>
+                        <h5 class="text-center mt-3"><?php $data->getname(7); ?></h5>
+                        <span class="price size-sm"><?php $data->getprice(7) ?></span>
                         <div class="text-center mt-1 mb-4">
                             <a href="include/show_product_detail.php?id=<?php $data->getId(7); ?>" class="nav-link font-bold hover color">View More</a>
                             <a href="include/display_single_product_to_card.php?id=<?php $data->getId(7); ?>" class="btn">Add To Cart</a>
@@ -297,11 +302,10 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-6">
-                    <img src="product-img/<?php
-                                            $data->product_eight(8); ?>" alt="product 5" class="img-fluid product-img5">
+                    <img src="product-img/<?php $data->product_eight(8); ?>" alt="product 5" class="img-fluid product-img5">
                     <div class="product-info">
-                        <h5 class="text-center mt-3">T-shirt Fashion</h5>
-                        <span class="price size-sm">$50.00</span>
+                        <h5 class="text-center mt-3"><?php $data->getname(8); ?></h5>
+                        <span class="price size-sm"><?php $data->getprice(8) ?></span>
                         <div class="text-center mt-1 mb-4">
                             <a href="include/show_product_detail.php?id=<?php $data->getId(8); ?>" class="nav-link font-bold hover color">View More</a>
                             <a href="include/display_single_product_to_card.php?id=<?php $data->getId(8); ?>" class="btn">Add To Cart</a>
@@ -312,8 +316,8 @@
                     <img src="product-img/<?php
                                             $data->product_eight(9); ?>" alt="product 6" class="img-fluid product-img6">
                     <div class="product-info">
-                        <h5 class="text-center mt-3">Gray T-shirt Fashion</h5>
-                        <span class="price size-sm">$50.00</span>
+                        <h5 class="text-center mt-3"><?php $data->getname(9); ?></h5>
+                        <span class="price size-sm"><?php $data->getprice(9) ?></span>
                         <div class="text-center mt-1 mb-4">
                             <a href="include/show_product_detail.php?id=<?php $data->getId(9); ?>" class="nav-link font-bold hover color">View More</a>
                             <a href="include/display_single_product_to_card.php?id=<?php $data->getId(9); ?>" class="btn">Add To Cart</a>
@@ -324,8 +328,8 @@
                     <img src="product-img/<?php
                                             $data->product_eight(10); ?>" alt="product 7" class="img-fluid product-img7">
                     <div class="product-info">
-                        <h5 class="text-center mt-3">Green T-shirt Fashion</h5>
-                        <span class="price size-sm">$50.00</span>
+                        <h5 class="text-center mt-3"><?php $data->getname(10); ?></h5>
+                        <span class="price size-sm"><?php $data->getprice(10) ?></span>
                         <div class="text-center mt-1 mb-4">
                             <a href="include/show_product_detail.php?id=<?php $data->getId(10); ?>" class="nav-link font-bold hover color">View More</a>
                             <a href="include/display_single_product_to_card.php?id=<?php $data->getId(10); ?>" class="btn">Add To Cart</a>
@@ -336,8 +340,8 @@
                     <img src="uploaded-images/<?php
                                                 $data->product_eight(13); ?>" alt="product 8" class="img-fluid product-img8">
                     <div class="product-info">
-                        <h5 class="text-center mt-3">Grey T-shirt Fashion</h5>
-                        <span class="price size-sm">$50.00</span>
+                        <h5 class="text-center mt-3"><?php $data->getname(13); ?></h5>
+                        <span class="price size-sm"><?php $data->getprice(13) ?></span>
                         <div class="text-center mt-1 mb-4 ">
                             <a href="include/show_product_detail.php?id=<?php $data->getId(13); ?>" class="nav-link font-bold hover color">View More</a>
                             <a href="include/display_single_product_to_card.php?id=<?php $data->getId(13); ?>" class="btn">Add To Cart</a>
@@ -349,7 +353,7 @@
     </div>
 
     <div class="text-center  mb-5">
-        <input type="submit" value="Shop Now" class="btn1 shadow ">
+        <a href="view/shop.php" class="btn1 btn shadow ">Shop Now</a>
     </div>
 
 

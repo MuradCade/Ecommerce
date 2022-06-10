@@ -106,6 +106,7 @@ if ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'customer') {
                                     <th scope="col">FirstName</th>
                                     <th scope="col">LastName</th>
                                     <th scope="col">City</th>
+                                    <th scope="col">Street_Name</th>
                                     <th scope="col">Payment_Method</th>
                                     <th scope="col">Payment_status</th>
                                     <th scope="col">Phone</th>
@@ -123,6 +124,7 @@ if ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'customer') {
                                     <td><?php echo $fetched['f_name'] ?></td>
                                     <td><?php echo $fetched['l_name'] ?></td>
                                     <td><?php echo $fetched['country'] ?></td>
+                                    <td><?php echo $fetched['street_name'] ?></td>
                                     <td><?php echo $fetched['payment_method'] ?></td>
                                     <td><?php echo $fetched['payment_status'] ?></td>
                                     <td><?php echo $fetched['phone'] ?></td>

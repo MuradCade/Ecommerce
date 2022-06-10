@@ -2,8 +2,9 @@
 
 session_start();
 
-use PHPMailer\PHPMailer\PHPMailer;
+use MessageBird\Objects\Recipient;
 
+require '../vendor/autoload.php';
 include("../model/connection.php");
 
 class Payment extends database
@@ -12,6 +13,10 @@ class Payment extends database
     {
         if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
             if (isset($_POST['submit'])) {
+                $sql = "select * from card";
+                $result = mysqli_query($this->connect, $sql);
+                $row = mysqli_fetch_assoc($result);
+                $products = $row['product_id'];
                 $iduser = $_SESSION['id'];
                 $fname = $_POST['fname'];
                 $lname = $_POST['lname'];
@@ -19,6 +24,13 @@ class Payment extends database
                 $payment = $_POST['payment'];
                 $phone = $_POST['phone'];
                 $email = $_POST['email'];
+                $streetname = $_POST['street'];
+                $zipcode = $_POST['zipcode'];
+                $c_number = $_POST['number'];
+                $token = openssl_random_pseudo_bytes(16);
+
+                //Convert the binary data into hexadecimal representation.
+                $token = bin2hex($token);
                 if ($fname == "") {
                     header("location:../view/payment.php?error-empty-fname-field");
                     exit();
@@ -34,30 +46,60 @@ class Payment extends database
                 } else if ($email == "") {
                     header("location:../view/payment.php?error-empty-email-field");
                     exit();
+                } else if ($streetname == "") {
+                    header("location:../view/payment.php?error-empty-streetname-field");
+                    exit();
+                } else if ($zipcode == "") {
+                    header("location:../view/payment.php?error-empty-zipcode-field");
+                    exit();
                 } else {
-                    $msg = "verified";
-                    $status = "Deliver In 2 Days";
-                    $payment_status = 'unverified';
-                    $product_id = rand(20, 1000);
+                    if (isset($_GET['id'])) {
+                        $product_id = $_GET['id'];
+                        $msg = "pending";
+                        $status = "Please Wait Second To Verify Your Order";
+                        $payment_status = 'unverified';
+                        $product_id = rand(20, 1000);
 
 
-                    $sql = "insert into payment(payment_id,user_id,f_name,l_name,country,payment_method,payment_status,phone,email)
-                    values('$product_id','$iduser','$fname','$lname','$country','$payment','$payment_status','$phone','$email')";
-                    $result = mysqli_query($this->connect, $sql);
+                        $sql = "insert into payment(payment_id,product_id,user_id,f_name,l_name,country,street_name,zipcode,company_number,payment_method,payment_status,phone,email)
+                    values('$product_id','$product_id','$iduser','$fname','$lname','$country','$streetname','$zipcode','$c_number','$payment','$payment_status','$phone','$email')";
+                        $result = mysqli_query($this->connect, $sql);
 
-                    if ($result) {
+                        if ($result) {
 
-                        if (isset($_GET['id'])) {
-                            $id = $_GET['id'];
-                            $sql2 = "insert into orders(product_id,user_id,order_status,payment_method,shipping_status,email)
-                            values('$product_id','$iduser','$msg','$payment','$status','$email');";
-                            $result2 = mysqli_query($this->connect, $sql2);
+                            if (isset($_GET['id'])) {
+                                $id = $_GET['id'];
+                                $sql2 = "insert into orders(product_id,user_id,order_status,payment_method,shipping_status,email,e_status)
+                            values('$products','$iduser','$msg','$payment','$status','$email','$token');";
+                                $result2 = mysqli_query($this->connect, $sql2);
+
+
+                                if ($result2) {
+                                    $sql = "TRUNCATE `ecomerce`.`card";
+                                    $result = mysqli_query($this->connect, $sql);
+                                    $msg = "Macmiil $fname,$lname Waxad Ka Iibsatay Allab Website Ka Greate Online Shop Fadlan Si aad Ula Socoto Order Kaga 
+                                    id geli trackorder page ku taala website kayaga Mahadsanid. id:$token";
+                                    $recever = $phone;
+                                    $messagebird = new \MessageBird\Client('beZdq1xtcVLk18cOJtlFA0w8A');
+
+                                    $message = new \MessageBird\Objects\Message();
+                                    try {
+                                        $message->header = "Greatness Online Shop";
+                                        $message->originator = "+252633558027";
+                                        $message->recipients = [$recever];
+                                        $message->body = $msg;
+                                        $response = $messagebird->messages->create($message);
+                                    } catch (Exception $e) {
+                                        echo $e;
+                                    }
+                                }
+                            }
+                            header("location:../view/home.php");
+                            exit();
+                        } else {
+                            header("location:../view/payment.php?error=payment-process-failed");
+                            exit();
                         }
-                        header("location:../view/payment.php?success=payment-process-successfully-excuted");
-                        exit();
-                    } else {
-                        header("location:../view/payment.php?error=payment-process-failed");
-                        exit();
                     }
                 }
             }
@@ -66,77 +108,7 @@ class Payment extends database
             exit();
         }
     }
-
-
-    public function sendIdemailOforder()
-    {
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-            $sql = "select * from orders where user_id = '$id'";
-            $result = mysqli_query($this->connect, $sql);
-            $row = mysqli_fetch_assoc($result);
-            if ($row['order_status'] === 'verified') {
-                // generate token then check for token
-                $token = openssl_random_pseudo_bytes(16);
-
-                //Convert the binary data into hexadecimal representation.
-                $token = bin2hex($token);
-                // $email = $row['email'];
-                // $name = "Product Purches On Greatness Online Shopping";
-                // echo "<br>";
-                // $subject = "Get 20% discount on your second purches";
-                // $body = "Hello Dear Customer Your Product Id Is : $token";
-
-
-
-
-                // require_once "../PHPMailer/PHPMailer.php";
-                // require_once "../PHPMailer/SMTP.php";
-                // require_once "../PHPMailer/Exception.php";
-
-                // // to send message using php mailer  you should proved your gmail account and password
-                // $mail = new PHPMailer();
-
-                // //SMTP Settings
-                // $mail->isSMTP();
-                // $mail->Host = "smtp.gmail.com";
-                // $mail->SMTPAuth = true;
-                // $mail->Username = "king12murad@gmail.com";
-                // $mail->Password = "mkbhdMKBHD0909";
-                // $mail->Port = 465; //587
-                // $mail->SMTPSecure = "ssl"; //tls
-
-                // //Email Settings
-                // $mail->isHTML(true);
-                // $mail->setFrom($email, $name);
-                // $mail->addAddress($email);
-                // $mail->Subject = $subject;
-                // $mail->Body = $body;
-
-                // if ($mail->send()) {
-
-                //     header("location:../view/checkout.php?secuess=emil-send");
-                //     exit();
-                // } else {
-                $sql2 = "update  orders set  e_status = '$token' where user_id = '$id'";
-                $result2 = mysqli_query($this->connect, $sql2);
-                if ($result2) {
-                    header("location:../view/checkout.php?success=Email-successfully-To-send");
-                    exit();
-                } else {
-                    header("location:../view/checkout.php?error=Email-failed-To-send");
-                    exit();
-                }
-                // header("location:../view/checkout.php?error=Email-Failed-To-send");
-                // exit();
-                // }
-            }
-        } else {
-            echo "failed";
-        }
-    }
 }
 
 $payment = new Payment();
 $payment->payment_method();
-$payment->sendIdemailOforder();
